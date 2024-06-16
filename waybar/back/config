@@ -1,0 +1,87 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 5,
+  "spacing": 1,
+  //"margin-bottom": 5,
+  "margin-top": 5,
+  "width": 1330,
+  "exclusive": true,
+  "gtk-layer-shell": false,
+  "passthrough": false,
+  "fixed-center": true,
+  "modules-left": ["sway/workspaces", "hyprland/workspaces"],
+  "modules-center": ["hyprland/window"],
+  "modules-right": [
+    "tray",
+    "memory",
+    "pulseaudio",
+    "clock#date",
+    "clock",
+    "custom/power",
+    "battery"
+  ],
+  "custom/spotify": {
+    "format": "{}",
+    "return-type": "json",
+    "on-click": "playerctl -p spotify play-pause",
+    "on-click-right": "spotifatius toggle-liked",
+    "on-click-middle": "playerctl -p spotify next",
+    "tooltip-format": "{tooltip}",
+    "exec": "spotifatius monitor",
+  },
+  "wlr/workspaces": {
+    "on-click": "activate",
+    "format": "{name}",
+    "all-outputs": true,
+    "disable-scroll": false,
+    "active-only": true
+  },
+  "tray": {
+    "show-passive-items": true,
+    "spacing": 1,
+  },
+  "clock": {
+    "tooltip": false,
+    "format": "  {:%H:%M}",
+  },
+  "clock#date": {
+    "format": "   {:%a %d %b}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+  },
+  "cpu": {
+    "format": "  {usage}%",
+    "tooltip": true,
+    "interval": 1
+  },
+  "memory": {
+    "format": "  {used:0.2f}G"
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "  muted",
+    "format-icons": {
+      "headphone": " ",
+      "hands-free": "󰂑",
+      "headset": "󰂑",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [" ", " ", " "]
+    },
+    "on-click": "pavucontrol"
+  },
+  "custom/logo": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/sep": {
+    "format": "|",
+    "tooltip": false
+  },
+  "custom/power": {
+    "tooltip": false,
+    "on-click": "wlogout -p layer-shell &",
+    "format": " "
+  },
+}

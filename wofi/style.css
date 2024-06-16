@@ -1,0 +1,45 @@
+* {
+  font-family: Fantasque Sans Mono;
+}
+
+window {
+  margin: 0px;
+  border: 1px solid #928374;
+  /*background-color: #002b36;*/
+  background-color: rgba(24, 24, 37, 0.9);
+  border-radius: 5px;
+}
+
+#input {
+  margin: 5px;
+  border: none;
+  color: #839496;
+  background-color: rgba(24, 24, 37, 0.9);
+}
+
+#inner-box {
+  margin: 5px;
+  border: none;
+  background-color: rgba(24, 24, 37, 0.9);
+}
+
+#outer-box {
+  margin: 5px;
+  border: none;
+  background-color: rgba(24, 24, 37, 0.9);
+}
+
+#scroll {
+  margin: 0px;
+  border: none;
+}
+
+#text {
+  margin: 5px;
+  border: none;
+  color: #839496;
+}
+
+#entry:selected {
+  background-color: rgba(24, 24, 37, 1);
+}

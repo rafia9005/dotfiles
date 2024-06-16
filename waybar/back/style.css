@@ -1,0 +1,160 @@
+* {
+  min-height: 0;
+  font-family: "iosevka";
+  font-size: 8px;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+window#waybar {
+  transition-property: background-color;
+  /*transition-duration: 0.5s;*/
+  /*background-color: transparent;*/
+  /*background-color: #181825;*/
+  background-color: rgba(20, 27, 30, 0.9);
+  /* everblush background */
+  /*background-color: #141b1e;*/
+}
+
+window#waybar.hidden {
+  opacity: 0.5;
+}
+
+#workspaces {
+  background-color: transparent;
+}
+
+#workspaces button {
+  all: initial;
+  min-width: 0;
+  box-shadow: inset 0 -3px transparent;
+  padding: 2px 10px;
+  min-height: 0;
+  margin: 4px 4px;
+  border-radius: 2px;
+  background-color: #181825;
+  color: #cdd6f4;
+}
+
+#workspaces button:hover {
+  box-shadow: inherit;
+  text-shadow: inherit;
+  color: #1e1e2e;
+  background-color: #cdd6f4;
+}
+
+#workspaces button.active {
+  color: #1e1e2e;
+  background-color: #f38ba8;
+}
+
+#workspaces button.urgent {
+  background-color: #f38ba8;
+}
+
+#clock,
+#pulseaudio,
+#custom-logo,
+#custom-power,
+#custom-spotify,
+#cpu,
+#memory,
+#window {
+  min-height: 0;
+  padding: 5px 10px;
+  border-radius: 3px;
+  margin: 4px 4px;
+}
+
+#custom-sep {
+  padding: 2px;
+  background-color: #585b70;
+  color: black;
+}
+
+#custom-spotify.playing {
+  background: #a6e3a1;
+  color: black;
+}
+
+#custom-spotify.liked,
+#custom-spotify.added {
+  background: #cba6f7;
+  color: black;
+}
+
+#custom-spotify.removed {
+  background: #f38ba8;
+  color: black;
+}
+
+#custom-spotify.paused {
+  background: #cdd6f4;
+  color: black;
+}
+
+window#waybar.empty #window {
+  background-color: transparent;
+}
+
+#cpu {
+  background: #94e2d5;
+  color: black;
+}
+
+#memory {
+  background: #cba6f7;
+  color: black;
+}
+
+#clock {
+  background: #89b4fa;
+  color: black;
+}
+
+#clock.date {
+  background: #74c7ec;
+  color: black;
+}
+
+#window {
+  font-size: 11px;
+  color: white;
+}
+
+#pulseaudio {
+  background: #b4befe;
+  color: black;
+}
+
+#pulseaudio.muted {
+  background: #a6adc8;
+  color: black;
+}
+
+#custom-logo {
+  background: #89b4fa;
+  color: black;
+  font-size: 12px;
+}
+
+#custom-power {
+  background: #f38ba8;
+  color: black;
+  padding-right: 6px;
+  font-size: 11px;
+}
+#battery {
+  font-size: 10px;
+  padding: 0 10px;
+}
+@keyframes blink {
+  to {
+    background-color: #f38ba8;
+    color: #181825;
+  }
+}
+
+tooltip {
+  border-radius: 8px;
+}
