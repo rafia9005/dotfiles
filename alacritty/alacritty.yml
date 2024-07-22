@@ -1,0 +1,59 @@
+font:
+  size: 6
+  normal:
+    family: "Fantasque Sans Mono"
+    style: "Regular"
+  bold:
+    family: "Fantasque Sans Mono"
+    style: "Bold"
+  italic:
+    family: "Fantasque Sans Mono"
+    style: "Italic"
+  bold_italic:
+    family: "Fantasque Sans Mono"
+    style: "Bold Italic"
+
+colors:
+  primary:
+    # background: "#282828"
+    background: "#35296C"
+    foreground: "#ebdbb2"
+    dim_foreground: "#928374"
+    bright_foreground: "#ebdbb2"
+  cursor:
+    text: "#282828"
+    cursor: "#fe8019"
+  vi_mode_cursor:
+    text: "#282828"
+    cursor: "#fe8019"
+  search:
+    matches:
+      foreground: "#282828"
+      background: "#b8bb26"
+    focused_match:
+      foreground: "#282828"
+      background: "#fabd2f"
+  footer_bar:
+    foreground: "#282828"
+    background: "#fe8019"
+  hints:
+    start:
+      foreground: "#282828"
+      background: "#fabd2f"
+    end:
+      foreground: "#282828"
+      background: "#fe8019"
+  selection:
+    text: "#282828"
+    background: "#b8bb26"
+  indexed_colors:
+    - index: 16
+      color: "#d3869b"
+    - index: 17
+      color: "#8ec07c"
+
+window:
+  padding:
+    x: 10
+    y: 10
+  opacity: 1

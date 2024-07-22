@@ -1,0 +1,46 @@
+* {
+  font-family: Fantasque Sans Mono;
+}
+
+window {
+  margin: 0px;
+  border: 1px solid #928374;
+  /*background-color: #002b36;*/
+  /*background-color: rgba(24, 24, 37, 0.9);*/
+  background-color: #282828;
+  border-radius: 5px;
+}
+
+#input {
+  margin: 5px;
+  border: none;
+  color: white;
+  background-color: #1d2021;
+}
+
+#inner-box {
+  margin: 5px;
+  border: none;
+  background-color: #1d2021;
+}
+
+#outer-box {
+  margin: 5px;
+  border: none;
+  background-color: #282828;
+}
+
+#scroll {
+  margin: 0px;
+  border: none;
+}
+
+#text {
+  margin: 5px;
+  border: none;
+  color: white;
+}
+
+#entry:selected {
+  background-color: #98971a;
+}

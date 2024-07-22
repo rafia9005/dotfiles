@@ -1,0 +1,51 @@
+* {
+  font-family: "JetBrains Mono";
+  font-size: 9px;
+  border-radius: 0px;
+  min-height: 0px;
+}
+
+window#waybar {
+  /*background-color: rgba(17, 17, 27, 0.9);*/
+  background-color: rgba(20, 27, 30, 1);
+  color: #c5c8c6;
+  opacity: 1;
+}
+
+#workspaces {
+  background-color: transparent;
+  font-size: 10px;
+}
+
+#workspaces button {
+  padding: 0 5px;
+  color: white;
+}
+#workspaces button:hover {
+  color: white;
+  background-color: transparent;
+}
+#workspaces button.active {
+  /*background-color: #c47fd5;*/
+  color: #c47fd5;
+}
+#custom-logo {
+  padding: 0 10px;
+}
+#pulseaudio,
+#cpu,
+#memory,
+#temperature,
+#battery,
+#clock,
+#tray,
+#custom-icon,
+#custom-power,
+#backlight {
+  /*background-color: #70ccdb;*/
+  color: white;
+  margin: 0px;
+}
+#custom-power {
+  padding: 0 10px;
+}

@@ -1,0 +1,154 @@
+{
+    "gtk-layer-shell": false,
+    "spacing": 4,
+    "height": 19,
+    "position": "top",
+    "modules-left": ["hyprland/workspaces", "custom/spotify"],
+    "modules-right": [
+        "cpu",
+        "custom/separator",
+        "backlight",
+        "custom/separator",
+        "battery",
+        "custom/separator",
+        "temperature",
+        "custom/separator",
+        "pulseaudio",
+        "custom/separator",
+        "network",
+        "custom/separator",
+        "clock",
+        "custom/separator",
+        "tray",
+        "custom/power"
+    ],
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{name}",
+    },
+    "custom/wmname": {
+        "format": "",
+        "tooltip": false,
+        "on-scroll-down": "/usr/local/bin/hyprctl dispatch workspace m+1",
+        "on-scroll-up": "/usr/local/bin/hyprctl dispatch workspace m-1"
+    },
+    "wlr/workspaces": {
+        "sort-by-name": true
+    },
+    "custom/language": {
+        "exec": "swaymsg --type get_inputs | grep \"xkb_active_layout_name\" | sed -u '1!d; s/^.*xkb_active_layout_name\": \"//; s/ (US)//; s/\",//' && swaymsg --type subscribe --monitor '[\"input\"]' | sed -u 's/^.*xkb_active_layout_name\": \"//; s/\",.*$//; s/ (US)//'"
+    },
+    "custom/separator": {
+        "format": "|",
+        "interval": "once",
+        "tooltip": false
+    },
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "tray": {
+        "icon-size": 9,
+        "spacing": 6
+    },
+    "clock": {
+        "format": "{:%H:%M %a %Y-%m-%d}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%H:%M:%S}",
+        "interval": 1
+    },
+    "cpu": {
+        "format": "&#8239;{usage}%",
+        "tooltip": false,
+        "on-click": "kitty procs --sortd cpu --watch-interval 2"
+    },
+    "memory": {
+        "format": " {}%"
+    },
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "{icon}&#8239;{temperatureC}°C",
+        "format-icons": ["", "", ""]
+    },
+    "backlight": {
+        "format": "{icon}&#8239;{percent}%",
+        "format-icons": ["💡", "💡"]
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}&#8239;  {capacity}%",
+        "format-charging": "🗲&#8239;{capacity}%",
+        "format-plugged": "🗲&#8239;{capacity}%",
+        "format-alt": "{icon} {time}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "battery#bat2": {
+        "bat": "BAT2"
+    },
+    "network": {
+        "format-wifi": "&#8239;{essid} ({signalStrength}%)",
+        "format-ethernet": "&#8239;{ifname}: {ipaddr}/{cidr}",
+        "format-linked": "&#8239;{ifname} (No IP)",
+        "format-disconnected": "✈&#8239;Disconnected",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+        "format-source": "🔈&#8239;{volume}%",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "💡",
+            "hands-free": "🔈",
+            "headset": "🔈",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["🔈", "🔈", "🔈"]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/power": {
+        "tooltip": false,
+        "on-click": "wlogout -p layer-shell &",
+        "format": " "
+    },
+    "custom/waylandvsxorg": {
+        "exec": "$HOME/bin/window_wayland_xorg.sh",
+        "interval": 2
+    },
+    "custom/pacman": {
+        "format": "pkgs:{}",
+        "exec": "$HOME/bin/updates-pacman-aurhelper.sh",
+        "interval": 600,
+        "on-click": "kitty paru -Syu --noconfirm --ignore=linux*"
+    },
+    "custom/spotify": {
+        "exec": "/usr/bin/python3 /home/frigaut/bin/mediaplayer.py --player spotify",
+        "format": "{}  ",
+        "return-type": "json",
+        "on-click": "playerctl play-pause",
+        "on-scroll-up": "playerctl next",
+        "on-scroll-down": "playerctl previous"
+    },
+    "custom/media": {
+        "format": "{icon} {}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null"
+    }
+}
+

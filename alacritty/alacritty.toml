@@ -1,0 +1,71 @@
+[[colors.indexed_colors]]
+color = "#d3869b"
+index = 16
+
+[[colors.indexed_colors]]
+color = "#8ec07c"
+index = 17
+
+[colors.cursor]
+cursor = "#fe8019"
+text = "#282828"
+
+[colors.footer_bar]
+background = "#fe8019"
+foreground = "#282828"
+
+[colors.hints.end]
+background = "#fe8019"
+foreground = "#282828"
+
+[colors.hints.start]
+background = "#fabd2f"
+foreground = "#282828"
+
+[colors.primary]
+background = "#282828"
+bright_foreground = "#ebdbb2"
+dim_foreground = "#928374"
+foreground = "#ebdbb2"
+
+[colors.search.focused_match]
+background = "#fabd2f"
+foreground = "#282828"
+
+[colors.search.matches]
+background = "#b8bb26"
+foreground = "#282828"
+
+[colors.selection]
+background = "#b8bb26"
+text = "#282828"
+
+[colors.vi_mode_cursor]
+cursor = "#fe8019"
+text = "#282828"
+
+[font]
+size = 8
+
+[font.bold]
+family = "Fantasque Sans Mono"
+style = "Bold"
+
+[font.bold_italic]
+family = "Fantasque Sans Mono"
+style = "Bold Italic"
+
+[font.italic]
+family = "Fantasque Sans Mono"
+style = "Italic"
+
+[font.normal]
+family = "Fantasque Sans Mono"
+style = "Regular"
+
+[window]
+opacity = 1
+
+[window.padding]
+x = 10
+y = 10
